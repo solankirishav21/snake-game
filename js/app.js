@@ -52,11 +52,11 @@ function gameEngine(){
     if(snakeArr[0].y === food.y && snakeArr[0].x ===food.x){
         foodSound.play();
         score += 1;
-        if(score>hiscoreval){
-            hiscoreval = score;
-            localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
-            // score_.innerHTML = "HiScore: " + hiscoreval;
-        }
+        // if(score>hiscoreval){
+        //     hiscoreval = score;
+        //     localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+        //     // score_.innerHTML = "HiScore: " + hiscoreval;
+        // }
         scoreBox.innerHTML = "Score: " + score;
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
         let a = 2;
