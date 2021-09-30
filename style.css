@@ -1,25 +1,62 @@
-body{
-    background-color: #A7F432;
-    height: 100vh;
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("./bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
-#game-board{
-    background-color: #90EE90 ;
-    width: 100vmin;
-    height: 100vmin;
+
+#scoreBox{
+    position: absolute;
+    top: 80px;
+    right: 175px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family:  'Ephesis', cursive;;
+}
+.image{
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    width: 27rem;
+    height: 25rem;
+}
+
+
+
+#board{
+    background: linear-gradient(rgb(116, 204, 116), #FCD34D);
+    width: 90vmin;
+    height: 92vmin;
+    border: 10px solid green;
     display: grid;
-    grid-template-rows: repeat(21,1fr);
-    grid-template-columns: repeat(21,1fr);
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
 }
+
+.head{
+    background: black;
+    border: 2px solid red; 
+    transform: scale(1.02);
+    border-radius: 20px;
+}
+
 .snake{
-    background-color: #1D4ED8;
-    border: 0.25vmin solid black;
+    background-color:#4338CA;
+    border: .5vmin solid white;
+    border-radius: 11px;
 }
+
 .food{
-    background-color: #FBBF24;
-    border: 0.25vmin solid black;
+    background: orange;
+    border: .75vmin solid #92400E;
+    border-radius: 8px;
 }
